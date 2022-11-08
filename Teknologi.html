@@ -2,7 +2,7 @@
 <html>
 
 <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <title>Teknologi 1: Læringsmål: Mini projekt</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -11,259 +11,267 @@
         <script>
                 $(function () {
                         $("#tabs").tabs();
-                        $("#sub-tabs").tabs();
+                        $("#om-1-tabs").tabs();
+                        $("#om-2-tabs").tabs();
+                        $("#om-3-tabs").tabs();
+                        $("#om-4-tabs").tabs();
 
-                        $( "#btnRun" ).click(function() 
-                        {
-                                $.ajax({url: "https://api.nationalize.io/?name="+encodeURIComponent($( "#navn" ).val()), success: function(result)
-                                {
-                                        $("#webresult").html("");
-                                        $.each(result.country, function (i) 
-                                        {
-                                        $.each(result.country[i], function (key, val) 
-                                        {
-                                                $("#webresult").append("<div>"+key+": "+val+"</div>");
-                                        });
-                        });
-                                }});
+                        $("#btnRun").click(function () {
+                                $.ajax({
+                                        url: "https://api.nationalize.io/?name=" + encodeURIComponent($("#navn").val()),
+                                        success: function (result) {
+                                                $("#webresult").html("");
+                                                $.each(result.country, function (i) {
+                                                        $.each(result.country[i], function (key, val) {
+                                                                $("#webresult").append("<div>" + key + ": " + val + "</div>");
+                                                        });
+                                                });
+                                        }
+                                });
                         });
                 });
         </script>
 </head>
 
 <body>
-        <div id="tabs">
-                <ul>
-                        <li><a href="#start">Start</a></li>
-                        <li><a href="#om-1">Område 1</a></li>
-                        <li><a href="#om-2">Område 2</a></li>
-                        <li><a href="#om-3">Område 3</a></li>
-                        <li><a href="#om-4">Område 4</a></li>
-                        <li><a href="#webs">Webservice</a></li>
-                </ul>
-                <div id="start">
-                        <p><b>Programmet arbejder med de 4 læringsmålsområder</b></p>
-                        <table>
-                                <tr>
-                                        <td>Område 1: Cloud, Operativ systemer, Database.</td>
-                                </tr>
-                                <tr>
-                                        <td>Område 2: Talsystemer, Debug. </td>
-                                </tr>
-                                <tr>
-                                        <td>Område 3: Samtidighedsproblematikker.</td>
-                                </tr>
-                                <tr>
-                                        <td>Område 4: Computernetværk.</td>
-                                </tr>
-                                <tr>
-                                        <td>Webservice: Test område af webservice</td>
-                                </tr>
-                        </table>
-                        <br />
+<div id="tabs">
+        <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#om-1">Område 1</a></li>
+                <li><a href="#om-2">Område 2</a></li>
+                <li><a href="#om-3">Område 3</a></li>
+                <li><a href="#om-4">Område 4</a></li>
+                <li><a href="#webs">Webservice</a></li>
+        </ul>
+        <div id="start">
+                <p><b>Programmet arbejder med de 4 læringsmålsområder</b></p>
+                <table>
+                        <tr>
+                                <td>Område 1: Cloud, Operativ systemer, Database.</td>
+                        </tr>
+                        <tr>
+                                <td>Område 2: Talsystemer, Debug.</td>
+                        </tr>
+                        <tr>
+                                <td>Område 3: Samtidighedsproblematikker.</td>
+                        </tr>
+                        <tr>
+                                <td>Område 4: Computernetværk.</td>
+                        </tr>
+                        <tr>
+                                <td>Webservice: Test område af webservice</td>
+                        </tr>
+                </table>
+                <br/>
 
-                        Mini projektet er udarbejdet af
-                        <br /><br />
-                        Mikas Isidor Baiocchi (mika9103@stud.kea.dk)
-                        <br /><br />
-                        Afleveringsdato
-        
-                </div>
-                <div id="om-1">
-                        <div id="sub-tabs">
+                Mini projektet er udarbejdet af
+                <br/><br/>
+                <table>
+                        <tr>
+                                <th>Name</th>
+                                <th>e-mail</th>
+                        </tr>
+                        <tr>
+                                <td>Mikas Isidor Baiocchi</td>
+                                <td>(mika9103@stud.kea.dk)</td>
+                        </tr>
+                        <tr>
+                                <td>Daniel Alexander Dam</td>
+                                <td>(dani36i9@stud.kea.dk)</td>
+                        </tr>
+                </table>
+
+        </div>
+
+        <!--        SUBJECT 1-->
+        <div id="om-1">
+                <div id="om-1-tabs">
+                        <ul>
+                                <li><a href="#om-1-spg-1">Spørgsmål 1</a></li>
+                                <li><a href="#om-1-spg-2">Spørgsmål 2</a></li>
+                                <li><a href="#om-1-spg-3">Spørgsmål 3</a></li>
+                                <li><a href="#om-1-spg-4">Spørgsmål 4</a></li>
+                                <li><a href="#om-1-spg-5">Spørgsmål 5</a></li>
+                                <li><a href="#om-1-spg-6">Spørgsmål 6</a></li>
+                                <li><a href="#om-1-spg-7">Spørgsmål 7</a></li>
+                                <li><a href="#om-1-spg-8">Spørgsmål 8</a></li>
+                                <li><a href="#om-1-spg-9">Spørgsmål 9</a></li>
+                        </ul>
+                        <div id="om-1-spg-1">
+                                <h1>Beskriv en computers hardware:</h1>
                                 <ul>
-                                        <li><a href="#spg1-1">spørgsmål 1</a></li>
-                                        <li><a href="#spg1-2">Område 2</a></li>
-                                        <li><a href="#spg1-3">Område 3</a></li>
-                                        <li><a href="#spg1-4">Område 4</a></li>
+                                        <li>
+                                                PSU (power supply unit) er den del der fordeler strøm til computerens motherboard
+                                        </li>
+                                        <li>
+                                                GPU (graphic processing unit) har styr på at udregne de forskellinge grafiske elementer på
+                                                computeren
+                                        </li>
+                                        <li>
+                                                Motherboard: En overflade som som forbinder computerens komponenter med hindanden
+                                        </li>
+                                        <li>
+                                                Harddisk: En harddisk indeholder hukommelsen/data.
+                                        </li>
+                                        <li>
+                                                RAM (Randomly access memory): bruges til gemme hukkommelse/data som computeren skal have hurtig
+                                                adgang til.
+                                                Den data som der gemmes kan også siges at være ikke-permanent da det er midlertidig data der
+                                                gemmes.
+                                        </li>
                                 </ul>
-                                <div id="spg1-1">
-                                        <h1>Beskriv en computers hardware:</h1>
-                                        <ul>
-                                                <li>
-                                                        PSU (power supply unit) er den del der fordeler strøm til computerens motherboard
-                                                </li>
-                                                <li>
-                                                        GPU (graphic processing unit) har styr på at udregne de forskellinge grafiske elementer på computeren
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                                <li>
-                                                        Harddisk: En harddisk indeholder hukommelsen/data.
-                                                </li>
-                                                <li>
-                                                        RAM (Randomly access memory): bruges til gemme hukkommelse/data som computeren skal have hurtig adgang til.
-                                                        Den data som der gemmes kan også siges at være ikke-permanent da det er midlertidig data der gemmes.
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div id="spg1-2">
-                                        <h1>Beskriv en computers hardware:</h1>
-                                        <ul>
-                                                <li>
-                                                        PSU (power supply unit) er den del der fordeler strøm til computerens motherboard
-                                                </li>
-                                                <li>
-                                                        GPU (graphic processing unit) har styr på at udregne de forskellinge grafiske elementer på computeren
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                                <li>
-                                                        Harddisk: En harddisk indeholder hukommelsen/data.
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div id="spg1-3">
-                                        <h1>Beskriv en computers hardware:</h1>
-                                        <ul>
-                                                <li>
-                                                        PSU (power supply unit) er den del der fordeler strøm til computerens motherboard
-                                                </li>
-                                                <li>
-                                                        GPU (graphic processing unit) har styr på at udregne de forskellinge grafiske elementer på computeren
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                                <li>
-                                                        Harddisk: En harddisk indeholder hukommelsen/data.
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div id="spg1-4">
-                                        <h1>Beskriv en computers hardware:</h1>
-                                        <ul>
-                                                <li>
-                                                        PSU (power supply unit) er den del der fordeler strøm til computerens motherboard
-                                                </li>
-                                                <li>
-                                                        GPU (graphic processing unit) har styr på at udregne de forskellinge grafiske elementer på computeren
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                                <li>
-                                                        Harddisk: En harddisk indeholder hukommelsen/data.
-                                                </li>
-                                                <li>
-                                                        Motherboard: En overflade som som forbinder computerens komponenter med hindanden
-                                                </li>
-                                        </ul>
-                                </div>
                         </div>
-
-                </div>
-                <div id="om-2">
-                        <h1>Område 2: Talsystemer, Debug.</h1>
-                        <p>Spørgsmål og svar</p>
-                        <ol>
-                                <li>Spørgsmål 1 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 2 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 3 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 4 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                        </ol>
-                </div>
-                <div id="om-3">
-                        <h1>Område 3: Samtidighedsproblematikker.</h1>
-                        <p>Spørgsmål og svar</p>
-                        <ol>
-                                <li>Spørgsmål 1 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 2 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 3 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 4 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                        </ol>
-                </div>
-                <div id="om-4">
-                        <h1>Område 4: Computernetværk.</h1>
-                        <p>Spørgsmål og svar</p>
-                        <ol>
-                                <li>Spørgsmål 1 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 2 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 3 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                                <li>Spørgsmål 4 </li>
-                                <ul>
-                                        <li>
-                                                Spørgsmål Svar
-                                        </li>
-                                </ul>
-                        </ol>
-                </div>
-                <div id="webs">
-                        <table>
-                                <tr>
-                                        <td>Navn</td><td style="padding-left: 20px;padding-right: 20px;"><input id="navn" alt="Klik på knappen og se svaret fra webserveren" title="Klik på knappen og se svaret fra webserveren"></td><td><button id="btnRun">Test webservice</button></td>
-                                </tr>
-                        </table>
-                        <br/>
-                        <br/>
-                        <b>Svar fra webservice</b>
-                        <div id="webresult"></div>
+                        <div id="om-1-spg-2">
+                                <h1>Beskriv Azure Cloud og hvad du kan bruge den til.</h1>
+                        </div>
+                        <div id="om-1-spg-3">
+                                <h1>Hvad er Raspberry Pi og hvad kan det bruges til?</h1>
+                        </div>
+                        <div id="om-1-spg-4">
+                                <h1>Hvilke typer harddiske findes i en computer og hvad er forskellen på dem?</h1>
+                        </div>
+                        <div id="om-1-spg-5">
+                                <h1>Hvilke typer busser findes der i en computer?</h1>
+                        </div>
+                        <div id="om-1-spg-6">
+                                <h1>Computernetværk: Hvad er forskellen på IP og MAC?</h1>
+                        </div>
+                        <div id="om-1-spg-7">
+                                <h1>Hvilke typer kategorier findes der for en PSU og hvad betyder de?</h1>
+                        </div>
+                        <div id="om-1-spg-8">
+                                <h1>Hvad er forskellen på RAM og Harddisk?</h1>
+                        </div>
+                        <div id="om-1-spg-9">
+                                <h1>Hvad er et DBMS MySQL og hvad kan det bruges til?</h1>
+                        </div>
                 </div>
 
         </div>
+
+        <!--        SUBJECT 2-->
+        <div id="om-2">
+                <div id="om-2-tabs">
+                        <ul>
+                                <li><a href="#om-2-spg-1">Spørgsmål 1</a></li>
+                                <li><a href="#om-2-spg-2">Spørgsmål 2</a></li>
+                                <li><a href="#om-2-spg-3">Spørgsmål 3</a></li>
+                                <li><a href="#om-2-spg-4">Spørgsmål 4</a></li>
+                                <li><a href="#om-2-spg-5">Spørgsmål 5</a></li>
+                        </ul>
+                        <div id="om-2-spg-1">
+                                <h1>Forklar hvad vi kan bruge følgende talsystemer til samt deres navne:</h1>
+                                <ul>
+                                        <li>16 –talsystemet</li>
+                                        <li>10 –talsystemet</li>
+                                        <li>2 –talsystemet</li>
+                                </ul>
+                        </div>
+                        <div id="om-2-spg-2">
+                                <h1>Forklar hvordan man regner mellem binær og decimal.</h1>
+                        </div>
+                        <div id="om-2-spg-3">
+                                <h1>Forklar hvordan man regner mellem binær og hexa decimal.</h1>
+                        </div>
+                        <div id="om-2-spg-4">
+                                <h1>Forklar hvad forkortelserne DDL og DML og hvad de bruges til.</h1>
+                        </div>
+                        <div id="om-2-spg-5">
+                                <h1>Beskriv hvordan man opretter et MySQL DBMS på Azure og hvad vi kan bruge sådan et til.</h1>
+                        </div>
+
+                </div>
+        </div>
+
+        <!--        SUBJECT 3-->
+        <div id="om-3">
+                <div id="om-3-tabs">
+                        <ul>
+                                <li><a href="#om-3-spg-1">Spørgsmål 1</a></li>
+                                <li><a href="#om-3-spg-2">Spørgsmål 2</a></li>
+                                <li><a href="#om-3-spg-3">Spørgsmål 3</a></li>
+                                <li><a href="#om-3-spg-4">Spørgsmål 4</a></li>
+                        </ul>
+                        <div id="om-3-spg-1">
+                                <h1>Beskriv hvad der gør et problem til et samtidighedsproblem gerne ift. jeres projekt.</h1>
+                        </div>
+                        <div id="om-3-spg-2">
+                                <h1>Beskriv en type af samtidighedsproblemer og gerne praktisk.</h1>
+                        </div>
+                        <div id="om-3-spg-3">
+                                <h1>Findes der nogle standard løsninger til at løse samtidighedsproblemer på?</h1>
+                        </div>
+                        <div id="om-3-spg-4">
+                                <h1>Beskriv Deadlock.</h1>
+                        </div>
+                </div>
+        </div>
+
+        <!--        SUBJECT 4-->
+        <div id="om-4">
+                <div id="om-4-tabs">
+                        <ul>
+                                <li><a href="#om-4-spg-1">Spørgsmål 1</a></li>
+                                <li><a href="#om-4-spg-2">Spørgsmål 2</a></li>
+                                <li><a href="#om-4-spg-3">Spørgsmål 3</a></li>
+                                <li><a href="#om-4-spg-4">Spørgsmål 4</a></li>
+                                <li><a href="#om-4-spg-5">Spørgsmål 5</a></li>
+                                <li><a href="#om-4-spg-6">Spørgsmål 6</a></li>
+                                <li><a href="#om-4-spg-7">Spørgsmål 7</a></li>
+                                <li><a href="#om-4-spg-8">Spørgsmål 8</a></li>
+                                <li><a href="#om-4-spg-9">Spørgsmål 9</a></li>
+                        </ul>
+                        <div id="om-4-spg-1">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-2">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-3">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-4">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-5">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-6">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-7">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-8">
+                                <h1>TEXT</h1>
+                        </div>
+                        <div id="om-4-spg-9">
+                                <h1>TEXT</h1>
+                        </div>
+                </div>
+        </div>
+
+        <!--        WEBSERVICE-->
+        <div id="webs">
+                <table>
+                        <tr>
+                                <td>Navn</td>
+                                <td style="padding-left: 20px;padding-right: 20px;"><input id="navn"
+                                                                                           alt="Klik på knappen og se svaret fra webserveren"
+                                                                                           title="Klik på knappen og se svaret fra webserveren">
+                                </td>
+                                <td>
+                                        <button id="btnRun">Test webservice</button>
+                                </td>
+                        </tr>
+                </table>
+                <br/>
+                <br/>
+                <b>Svar fra webservice</b>
+                <div id="webresult"></div>
+        </div>
+
+</div>
 
 </body>
 
